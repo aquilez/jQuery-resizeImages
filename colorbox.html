@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>resizeImages for jQuery</title>
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Text+Me+One">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.colorbox.min.js"></script>
+	<script src="js/jquery.resizeimages.js"></script>
+
+	<script>
+		jQuery(document).ready(function($){
+			$('#content img').resizeImages({
+				maxWidth: 600,
+				maxHeight: 300,
+				msgResized: 'This image has been scaled to {resized_w}x{resized_h}px. Click here to see the full image.',
+				msgNotResized: '', // This message is not used here, because the callback overrides the default functionality
+				showOriginalCallback: function(image){
+					$.colorbox({
+						href: image.attr('src')
+					});
+
+					return false;
+				},
+				showResizedCallback: function(image){
+					return false;
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+
+<div id="content">
+	<h1>resizeImages</h1>
+
+	<ul>
+		<li><a href="http://teleportz.com.ar/article/plugin-jquery-auto-redimensionar-imagenes" title="resizeImages source code at GitHub">Get the code @ GitHub</a></li>
+		<li>by <a href="http://about.me/santiagodimattia" title="About Santiago Dimattia">Santiago Dimatt&iacute;a</a> - <a href="http://teleportz.com.ar" title="Teleportz">Teleportz.com.ar</a></li>
+		<li>Max image size in this demo: 600x300 px.</li>
+		<li>This demo has custom callbacks to provide integration with <a href="http://www.jacklmoore.com/colorbox">ColorBox</a>.</li>
+		<li><a href="index.html">See normal demo</a>.</li>
+	</ul>
+
+	<hr>
+
+	<img src="img/imagen01.png" alt="Google +">
+	<img src="img/imagen02.png" alt="MarkItUp!">
+	<img src="img/imagen03.png" alt="Teleportz.com.ar Screenshot">
+</div><!-- #content -->
+
+</body>
+</html>
