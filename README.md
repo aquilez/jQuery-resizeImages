@@ -50,10 +50,16 @@ Int. The maximum height for the image. In pixels.
 ### msgResized
 
 Message to show on top of the image when it's resized.
+You can use the following variables that will be parsed by the plugin:
+- {resized_w} - The width of the resized image
+- {resized_h} - The height of the resized image
+- {original_w} - The width of the original image
+- {original_h} - The height of the original image
 
 ### msgNotResized
 
 Message to show on top of the image when you are viewing the original size.
+You can use the variables available in msgResized.
 
 ### showOriginalCallback
 
