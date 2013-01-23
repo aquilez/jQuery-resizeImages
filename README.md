@@ -1,6 +1,6 @@
 # jQuery resizeImages
 
-* Site: [jQuery resizeImages](https://aquilez.github.com/jQuery-resizeImages/)
+* Site: [jQuery resizeImages](http://aquilez.github.com/jQuery-resizeImages/)
 * Author: [Santiago Dimattía](http://about.me/santiagodimattia)
 * License: [MIT](http://www.opensource.org/licenses/mit-license.php)
 
@@ -13,7 +13,7 @@ You can replace the default functionality using callbacks. Check the [official s
 
 ## Screenshot
 
-You can access a live demo on the plugin page, [here](https://aquilez.github.com/jQuery-resizeImages/).
+You can access a live demo on the plugin page, [here](http://aquilez.github.com/jQuery-resizeImages/).
 
 ## Usage
 
